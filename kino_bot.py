@@ -14,11 +14,19 @@ bot = telebot.TeleBot(API_TOKEN)
 
 # 🎬 KINO BAZASI - Hamma 5 ta kinoni kiritdim
 kino_bazasi = {
-    "101": "BAACAgEAAxkBAAM7aVvYsmtCsj-mUOPvjBalnYHARxUAAnECAAIF-UhHbxCnbW9U_v84BA",
-    "102": "BAACAgQAAxkBAAM8aVvYshdHRtdH1rMfMFcYW13XcJ8AAloXAAIDAyhS49H7OoIk1Us4BA",
-    "103": "BAACAgIAAxkBAAM9aVvYsqM3kWcuBUH36oR90lIKIMMAAp46AALZxDFLcZmZyuUjOy04BA",
-    "104": "BAACAgQAAxkBAAM-aVvYssjNI7YNuTmLk7OwwRLi_GwAAtYRAAJPbPhSa5dhQwqkMZo4BA",
-    "105": "BAACAgQAAxkBAAM_aVvYsvfueD_R3blR34Nn3dlSop0AAjYUAALm_BFTgFOjf73Kbf04BA",
+    "101": "BAACAgEAAxkBAAM7aVvYsmtCsj-mUOPvjBalnYHARxUAAnECAAIF-UhHbxCnbW9U_v84BA", #forsaj 10",
+    "102": "BAACAgQAAxkBAAM8aVvYshdHRtdH1rMfMFcYW13XcJ8AAloXAAIDAyhS49H7OoIk1Us4BA", #oyda yolg'iz",
+    "103": "BAACAgIAAxkBAAM9aVvYsqM3kWcuBUH36oR90lIKIMMAAp46AALZxDFLcZmZyuUjOy04BA", #mening iblisim 1",
+    "104": "BAACAgQAAxkBAAM-aVvYssjNI7YNuTmLk7OwwRLi_GwAAtYRAAJPbPhSa5dhQwqkMZo4BA", #mening iblisim 2",
+    "105": "BAACAgQAAxkBAAM_aVvYsvfueD_R3blR34Nn3dlSop0AAjYUAALm_BFTgFOjf73Kbf04BA", #mening iblisim 3",
+    "106": "BAACAgUAAyEFAATNH_mnAAMHaVv-7_q_jHXR3x5FoecPDuxHrFgAArkZAAKokAlUOwyt3j5An5U4BA", #ono 1",
+    "107": "BAACAgUAAyEFAATNH_mnAAMIaVv-71tV2H3C3-MUmeT6qPUZXhsAAj0cAAKtvklUVTF0mwzNypo4BA", #ono 2",
+    "108": "BAACAgUAAyEFAATNH_mnAAMJaVv-71YpU8ENkv_wrER8V_u36UgAAtAdAAKegKhUvivyhgr3HNo4BA", #ono 3",
+    "109": "BAACAgIAAyEFAATNH_mnAAMKaVv-72a5190lPZeNVMW_SPyVGRMAAsuSAAIo9fFI4OykFYuMpWM4BA", #ono 4",
+    "110": "BAACAgUAAyEFAATNH_mnAAMLaVv-7842hHnoSmaCsPeSYFbcQl8AArAaAAIobjhVTLmcQUBz9i84BA", #ono 5",
+    "111": "BAACAgIAAyEFAATNH_mnAAMMaVv-79bYOtzzHj6LsuhBquBhIigAAsGMAAJamHlJjenvAc5K51Q4BA", #ono 6",
+    "112": "BAACAgIAAyEFAATNH_mnAAMNaVv-75GlrHR1hzBbM0xd6oiJQf0AAp-dAALa7NBJXJHT2mG6Las4BA", #ono 7",
+    "113": "BAACAgUAAyEFAATNH_mnAAMOaVv-71lYgeTxHvyWrQwr5gwY_LwAAkAaAAKFLBBWTA8JHEwF-fo4BA", #ono 8",
 }
 
 @bot.message_handler(commands=['start'])
@@ -51,4 +59,5 @@ if __name__ == "__main__":
     threading.Thread(target=run_bot, daemon=True).start()
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
+
 
