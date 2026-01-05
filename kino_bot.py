@@ -1,7 +1,7 @@
 import telebot
 
 # SHU YERGA BOTFATHERDAN OLINGAN YANGI TOKENNI QO'Y!
-API_TOKEN = '8387942640:AAF53VUE6Zd2Wr8vEfq_KZ_eUvFtX5BG_GM'
+API_TOKEN = '8387942640:AAGYQvo_R0Jhn6xyeMtqaN8O64yCe7FtsKA'
 bot = telebot.TeleBot(API_TOKEN)
 
 # KINO BAZASI
@@ -28,4 +28,5 @@ def find_kino(message):
 
 print("Bot qayta ishga tushdi...")
 bot.infinity_polling()
+
 
