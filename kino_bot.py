@@ -14,11 +14,11 @@ bot = telebot.TeleBot(API_TOKEN)
 
 # 🎬 KINO BAZASI - Hamma 5 ta kinoni kiritdim
 kino_bazasi = {
-    "101": "BAACAgQAAxkBAAMJaVqx79KJBD7w-hDmYndKZbPVzs4AAloXAAIDAYhS49H7OoIk1Us4BA",
-    "102": "BAACAgEAAxkBAAMHaVqx9qG6QUvr90_8Qk4gidNBE08MAAnECAAI F-UhHbxCnbW9U_v84BA",
-    "103": "BAACAgIAAxkBAAMKaVqx79zcV0ZO9BdMoP14GLusYmUAAP46AALZxDFLcZmZyuUjOy04BA",
-    "104": "BAACAgQAAxkBAAMLaVqx78kR9cDBMeyeJjzxZq_4B7UAAtYRAAJPbPhSa5dhQwqkMZo4BA",
-    "105": "BAACAgQAAxkBAAMMaVqx78fG0RyfB7z-19LoE5Pxn8AAJyYUAAI m_BftgFOjf73kbf04BA",
+    "101": "BAACAgEAAxkBAAM7aVvYsmtCsj-mUOPvjBalnYHARxUAAnECAAIF-UhHbxCnbW9U_v84BA",
+    "102": "BAACAgQAAxkBAAM8aVvYshdHRtdH1rMfMFcYW13XcJ8AAloXAAIDAyhS49H7OoIk1Us4BA",
+    "103": "BAACAgIAAxkBAAM9aVvYsqM3kWcuBUH36oR90lIKIMMAAp46AALZxDFLcZmZyuUjOy04BA",
+    "104": "BAACAgQAAxkBAAM-aVvYssjNI7YNuTmLk7OwwRLi_GwAAtYRAAJPbPhSa5dhQwqkMZo4BA",
+    "105": "BAACAgQAAxkBAAM_aVvYsvfueD_R3blR34Nn3dlSop0AAjYUAALm_BFTgFOjf73Kbf04BA",
 }
 
 @bot.message_handler(commands=['start'])
@@ -51,3 +51,4 @@ if __name__ == "__main__":
     threading.Thread(target=run_bot, daemon=True).start()
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
+
