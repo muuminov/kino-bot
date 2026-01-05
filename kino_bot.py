@@ -1,13 +1,12 @@
 import telebot
-import os
 
-# Xavfsizlik uchun tokenni Koyeb'dan olamiz
-API_TOKEN = os.getenv('BOT_TOKEN')
+# SHU YERGA BOTFATHERDAN OLINGAN YANGI TOKENNI QO'Y!
+API_TOKEN = '8387942640:AAF53VUE6Zd2Wr8vEfQ_KZ_eUvFtX5BG_GM'
 bot = telebot.TeleBot(API_TOKEN)
 
 # KINO BAZASI
 kino_bazasi = {
-    "101": "BAACAgIAAxkBAAMJaVqx79KJBD7w-hDmYndKZbpVzs4AAloXAAIDAYhS49H7OoIk1Us4BA",
+    "101": "BAACAgQAAxkBAAMJaVqx79KJBD7w-hDmYndKZbpVzs4AAloXAAIDAYhS49H7OoIk1Us4BA",
     "102": "BAACAgEAAxkBAAMHaVqx9q6G0Uvr9O_8Qk4GidNBE08MAAnECAAIF-UhHbxCnbW9U_v84BA",
     "103": "BAACAgIAAxkBAAMKaVqx79zcV0ZO9BdMoP14GLusYmUAAP46AALZxDFLcZmZyuUjOy04BA",
     "104": "BAACAgQAAxkBAAMLaVqx78kR9cDBMeyeJjZXZq_4B7UAAtYRAAJPbPhSa5dhQwqkMZo4BA",
@@ -23,7 +22,7 @@ def find_kino(message):
     kod = message.text
     if kod in kino_bazasi:
         file_id = kino_bazasi[kod]
-        bot.send_video(message.chat.id, file_id, caption=f"🎬 Mana siz qidirgan kino! \nKodi: {kod}")
+        bot.send_video(message.chat.id, file_id, caption=f"🎬 Mana siz qidirgan kino!\nKodi: {kod}")
     else:
         bot.reply_to(message, "❌ Kechirasiz, bu kod bilan kino topilmadi.")
 
