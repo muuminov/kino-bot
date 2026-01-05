@@ -1,33 +1,20 @@
 import os
 import telebot
+from flask import Flask # Buni qo'shamiz
 
+server = Flask(__name__) # Sayt yaratamiz
 API_TOKEN = os.getenv('BOT_TOKEN')
 bot = telebot.TeleBot(API_TOKEN)
 
-# KINO BAZASI
-kino_bazasi = {
-    "101": "BAACAgQAAxkBAAMJaVqx79KJBD7w-hDmYndKZbpVzs4AAloXAAIDAYhS49H7OoIk1Us4BA",
-    "102": "BAACAgEAAxkBAAMHaVqx9q6G0Uvr9O_8Qk4GidNBE08MAAnECAAIF-UhHbxCnbW9U_v84BA",
-    "103": "BAACAgIAAxkBAAMKaVqx79zcV0ZO9BdMoP14GLusYmUAAP46AALZxDFLcZmZyuUjOy04BA",
-    "104": "BAACAgQAAxkBAAMLaVqx78kR9cDBMeyeJjZXZq_4B7UAAtYRAAJPbPhSa5dhQwqkMZo4BA",
-    "105": "BAACAgQAAxkBAAMMaVqx78fG0RyfB7z-19LoE5Pxn8AAJyYUAALm_BFtgFOjf73Kbf04BA",
-}
+@server.route("/")
+def webhook():
+    return "Bot ishlayapti!", 200
 
-@bot.message_handler(commands=['start'])
-def start(message):
-    bot.reply_to(message, "Salom! Bot qayta yoqildi. Kino kodini yuboring!")
+# Botingni qolgan kodlari shu yerda bo'ladi...
 
-@bot.message_handler(func=lambda message: True)
-def find_kino(message):
-    kod = message.text
-    if kod in kino_bazasi:
-        file_id = kino_bazasi[kod]
-        bot.send_video(message.chat.id, file_id, caption=f"🎬 Mana siz qidirgan kino!\nKodi: {kod}")
-    else:
-        bot.reply_to(message, "❌ Kechirasiz, bu kod bilan kino topilmadi.")
-
-print("Bot qayta ishga tushdi...")
-bot.infinity_polling()
-
-
-
+if __name__ == "__main__":
+    # Botni alohida oqimda yurgizamiz
+    import threading
+    threading.Thread(target=bot.infinity_polling).start()
+    # Saytni yoqamiz
+    server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
