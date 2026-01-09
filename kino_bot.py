@@ -27,6 +27,11 @@ kino_bazasi = {
     "111": "BAACAgIAAyEFAATNH_mnAAMMaVv-79bYOtzzHj6LsuhBquBhIigAAsGMAAJamHlJjenvAc5K51Q4BA", #ono 6",
     "112": "BAACAgIAAyEFAATNH_mnAAMNaVv-75GlrHR1hzBbM0xd6oiJQf0AAp-dAALa7NBJXJHT2mG6Las4BA", #ono 7",
     "113": "BAACAgUAAyEFAATNH_mnAAMOaVv-71lYgeTxHvyWrQwr5gwY_LwAAkAaAAKFLBBWTA8JHEwF-fo4BA", #ono 8",
+    "114": "BAACAgIAAxkBAAIBYWlhOkNBCn5oaxPgf57uFEjSESQ4AAIeBAACqqxYSdw7snnZHDJcOAQ", #sumerki 1",
+    "115": "BAACAgIAAxkBAAIBYmlhOkOQCoEvaLy5-hjzTitUrdK4AALGAwACx0RYSfQnWs1AHGS_OAQ", #sumerki 2",
+    "116": "BAACAgIAAxkBAAIBY2lhOkN0wfj3KI7K6bUltZaBTB5VAAJIBAACqqxYSdBIKucInj3VOAQ", #sumerki 3",
+    "117": "BAACAgIAAxkBAAIBZGlhOkO-UNoUDBg7VP66uFMLMRHdAAIVBAACx0RYSQ88zXBDQZnhOAQ", #sumerki 4",
+    "118": "BAACAgIAAxkBAAIBZWlhOkOiyXLkzvbMHYYtYW-Wke7tAALcAgACRmUJSv8jWnvquivkOAQ", #sumerki 5",
 }
 
 @bot.message_handler(commands=['start'])
@@ -59,5 +64,6 @@ if __name__ == "__main__":
     threading.Thread(target=run_bot, daemon=True).start()
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
+
 
 
