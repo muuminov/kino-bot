@@ -32,6 +32,7 @@ kino_bazasi = {
     "116": "BAACAgIAAxkBAAIBY2lhOkN0wfj3KI7K6bUltZaBTB5VAAJIBAACqqxYSdBIKucInj3VOAQ", #sumerki 3",
     "117": "BAACAgIAAxkBAAIBZGlhOkO-UNoUDBg7VP66uFMLMRHdAAIVBAACx0RYSQ88zXBDQZnhOAQ", #sumerki 4",
     "118": "BAACAgIAAxkBAAIBZWlhOkOiyXLkzvbMHYYtYW-Wke7tAALcAgACRmUJSv8jWnvquivkOAQ", #sumerki 5",
+    "119": "BAACAgQAAxkBAAIBeWliODzrAAFOf_FFw4BqNMG_Gesa8wAChzwAAomd6VIWYfNggLdZyTgE", #qasoskor ruh",
 }
 
 @bot.message_handler(commands=['start'])
@@ -64,6 +65,7 @@ if __name__ == "__main__":
     threading.Thread(target=run_bot, daemon=True).start()
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
+
 
 
 
