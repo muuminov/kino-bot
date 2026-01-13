@@ -38,6 +38,7 @@ kino_bazasi = {
     "122": "BAACAgIAAyEFAATNH_mnAAMSaWYws_i5T7NCaQfF9zQm8YuFrsEAAqWGAAKQLdFKojsqX7hzeQABOAQ", #iblis qutusi 1",
     "123": "BAACAgQAAxkBAAIBwWlmg_Jy70xCw7qLtVmdgKcAAXpAqAACaAcAAkPfmFIzApgK_PWIsDgE", #ONO 1",
     "124": "BAACAgEAAxkBAAIBwmlmg_LNDZ7o9oVXn10fnKfxMWcIAAIsAQACJl6ZRmdmVjOMfKUtOAQ", #ONO 2",
+    "125": "BAACAgQAAyEFAATNH_mnAAMVaWaQd-X65ECUc6W1jT83Zo01liMAAssOAAICgxlTC0vzOCgs3Oo4BA", #qonli suyak",
 }
 
 @bot.message_handler(commands=['start'])
@@ -70,6 +71,7 @@ if __name__ == "__main__":
     threading.Thread(target=run_bot, daemon=True).start()
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
+
 
 
 
