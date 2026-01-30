@@ -67,15 +67,12 @@ def find_kino(message):
 def run_bot():
     bot.infinity_polling(timeout=20, long_polling_timeout=10)
 
+# Eski threading qismini o'chirib, buni qo'y:
 if __name__ == "__main__":
-    threading.Thread(target=run_bot, daemon=True).start()
-    port = int(os.environ.get("PORT", 5000))
+    # Botni polling rejimida alohida emas, asosiy oqimda ishlatamiz
+    import threading
+    threading.Thread(target=lambda: bot.infinity_polling(timeout=20, long_polling_timeout=10)).start()
+    
+    # Render uchun Flask serverni asosiy portda yuritamiz
+    port = int(os.environ.get("PORT", 10000))
     app.run(host='0.0.0.0', port=port)
-
-
-
-
-
-
-
-
